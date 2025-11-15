@@ -97,7 +97,7 @@ echo "Mosquitto MQTT installed and running on port 1883."
 # -------------------------
 echo "Installing Qdrant v1.15.5..."
 QDRANT_VERSION="1.15.5"
-QDRANT_URL="https://github.com/qdrant/qdrant/releases/download/v${QDRANT_VERSION}/qdrant-v${QDRANT_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+QDRANT_URL="https://github.com/qdrant/qdrant/releases/download/v1.15.5/qdrant-aarch64-unknown-linux-musl.tar.gz"
 
 sudo mkdir -p "$QDRANT_DATA"
 sudo chown -R "$USER":"$USER" "$QDRANT_DATA"

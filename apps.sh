@@ -137,7 +137,7 @@ After=network.target
 [Service]
 Type=simple
 User=$USER
-ExecStart=/usr/local/bin/qdrant --storage-path $QDRANT_DATA
+ExecStart=/usr/local/bin/qdrant
 Restart=always
 RestartSec=5
 

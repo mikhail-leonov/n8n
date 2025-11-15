@@ -87,9 +87,16 @@ sudo chown -R mosquitto:mosquitto "$MOSQUITTO_DATA"
 
 sudo tee /etc/mosquitto/mosquitto.conf > /dev/null <<EOF
 persistence true
-persistence_location $MOSQUITTO_DATA/
+persistence_location /mnt/ssd/mosquitto/
+log_dest file /mnt/ssd/mosquitto/mosquitto.log
+
 listener 1883
 allow_anonymous true
+
+# Enable WebSocket listener
+listener 9001
+protocol websockets
+
 EOF
 
 sudo systemctl enable mosquitto

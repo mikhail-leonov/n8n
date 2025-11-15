@@ -21,6 +21,7 @@ USER_HOME="/home/$USER"
 echo "Updating system..."
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl gnupg lsb-release software-properties-common unzip tar
+sudo apt install -y build-essential python3-dev libsqlite3-dev
 
 # -------------------------
 # 1. Install Node.js (required for n8n)
@@ -35,6 +36,7 @@ echo "npm version: $(npm -v)"
 # 2. Install n8n
 # -------------------------
 echo "Installing n8n..."
+sudo apt update -y && sudo apt upgrade -y
 sudo npm install -g n8n --legacy-peer-deps
 
 # Create n8n data folder on SSD
@@ -72,6 +74,7 @@ echo "n8n installed and running on port 5678."
 # 3. Install Mosquitto MQTT
 # -------------------------
 echo "Installing Mosquitto MQTT..."
+sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y mosquitto mosquitto-clients
 
 # Enable persistence and configure data folder on SSD

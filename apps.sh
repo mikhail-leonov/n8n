@@ -161,3 +161,8 @@ echo "Access info:"
 echo "n8n: http://<Pi_IP>:5678"
 echo "Mosquitto MQTT: tcp://<Pi_IP>:1883"
 echo "Qdrant: http://<Pi_IP>:6333"
+
+
+sudo systemctl status n8n
+sudo systemctl status mosquito
+sudo systemctl status qdrant

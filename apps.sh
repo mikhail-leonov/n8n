@@ -23,6 +23,10 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl gnupg lsb-release software-properties-common unzip tar
 sudo apt install -y build-essential python3-dev libsqlite3-dev
 
+sudo apt upgrade -y libdrm-amdgpu1
+sudo apt upgrade -y libdrm-common
+sudo apt upgrade -y libdrm2
+
 # -------------------------
 # 1. Install Node.js (required for n8n)
 # -------------------------

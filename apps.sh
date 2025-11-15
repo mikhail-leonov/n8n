@@ -40,7 +40,7 @@ echo "npm version: $(npm -v)"
 # -------------------------
 echo "Installing n8n..."
 sudo apt update -y && sudo apt upgrade -y
-sudo npm install -g n8n --legacy-peer-deps
+sudo npm install -g n8n --unsafe-perm
 
 # Create n8n data folder on SSD
 sudo mkdir -p "$N8N_DATA"
@@ -60,6 +60,7 @@ Environment="N8N_PORT=5678"
 Environment="N8N_HOST=0.0.0.0"
 Environment="N8N_BASIC_AUTH_ACTIVE=false"
 Environment="N8N_DATA_FOLDER=$N8N_DATA"
+Environment="N8N_SECURE_COOKIE=false"
 ExecStart=$(which n8n) start
 Restart=always
 RestartSec=5

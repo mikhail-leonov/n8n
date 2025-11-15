@@ -81,9 +81,9 @@ echo "Installing Mosquitto MQTT..."
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y mosquitto mosquitto-clients
 
-sudo touch /mnt/ssd/mosquitto/mosquitto.log
-sudo chown mosquitto:mosquitto /mnt/ssd/mosquitto/mosquitto.log
-sudo chmod 644 /mnt/ssd/mosquitto/mosquitto.log
+sudo touch /mnt/ssd/var/log/mosquitto/mosquitto.log
+sudo chown mosquitto:mosquitto /mnt/ssd/var/log/mosquitto/mosquitto.log
+sudo chmod 644 /mnt/ssd/var/log/mosquitto/mosquitto.log
 
 # Enable persistence and configure data folder on SSD
 sudo mkdir -p "$MOSQUITTO_DATA"
@@ -92,7 +92,7 @@ sudo chown -R mosquitto:mosquitto "$MOSQUITTO_DATA"
 sudo tee /etc/mosquitto/mosquitto.conf > /dev/null <<EOF
 persistence true
 persistence_location /mnt/ssd/mosquitto/
-log_dest file /mnt/ssd/mosquitto/mosquitto.log
+log_dest file /mnt/ssd/var/log/mosquitto/mosquitto.log
 
 listener 1883
 allow_anonymous true

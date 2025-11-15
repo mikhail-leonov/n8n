@@ -35,7 +35,7 @@ echo "npm version: $(npm -v)"
 # 2. Install n8n
 # -------------------------
 echo "Installing n8n..."
-sudo npm install -g n8n
+sudo npm install -g n8n --legacy-peer-deps
 
 # Create n8n data folder on SSD
 sudo mkdir -p "$N8N_DATA"

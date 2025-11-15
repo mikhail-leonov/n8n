@@ -89,6 +89,10 @@ sudo chmod 644 /mnt/ssd/var/log/mosquitto/mosquitto.log
 sudo mkdir -p "$MOSQUITTO_DATA"
 sudo chown -R mosquitto:mosquitto "$MOSQUITTO_DATA"
 
+sudo mkdir -p /var/log/mosquitto
+sudo rm -f /var/log/mosquitto/mosquitto.log
+sudo ln -s /mnt/ssd/var/log/mosquitto/mosquitto.log /var/log/mosquitto/mosquitto.log
+
 sudo tee /etc/mosquitto/mosquitto.conf > /dev/null <<EOF
 persistence true
 persistence_location /mnt/ssd/mosquitto/

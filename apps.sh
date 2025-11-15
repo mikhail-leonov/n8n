@@ -61,7 +61,7 @@ Environment="N8N_PORT=5678"
 Environment="N8N_HOST=0.0.0.0"
 Environment="N8N_BASIC_AUTH_ACTIVE=false"
 Environment="N8N_DATA_FOLDER=$N8N_DATA"
-ExecStart=$(which n8n)
+ExecStart=$(which n8n) start
 Restart=always
 RestartSec=5
 

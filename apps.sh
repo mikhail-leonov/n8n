@@ -81,6 +81,10 @@ echo "Installing Mosquitto MQTT..."
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y mosquitto mosquitto-clients
 
+sudo touch /mnt/ssd/mosquitto/mosquitto.log
+sudo chown mosquitto:mosquitto /mnt/ssd/mosquitto/mosquitto.log
+sudo chmod 644 /mnt/ssd/mosquitto/mosquitto.log
+
 # Enable persistence and configure data folder on SSD
 sudo mkdir -p "$MOSQUITTO_DATA"
 sudo chown -R mosquitto:mosquitto "$MOSQUITTO_DATA"

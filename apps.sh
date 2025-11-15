@@ -164,5 +164,5 @@ echo "Qdrant: http://<Pi_IP>:6333"
 
 
 sudo systemctl status n8n
-sudo systemctl status mosquito
+sudo systemctl status mosquitto
 sudo systemctl status qdrant
